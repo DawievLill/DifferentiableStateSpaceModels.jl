@@ -11,6 +11,8 @@ function should_rethrow(e)
         return false
     elseif e isa PosDefException
         return false
+    elseif e isa DomainError
+	return false
     else
         return true
     end
